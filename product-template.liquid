@@ -1,0 +1,1 @@
+<option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %} id="{% for variant in product.variants %}{% if variant.title ==  value %}{% if variant.inventory_quantity < 1 %}{{ value }}Pre-Order{% else %}Available{% endif %}{% endif %}{% endfor %}">
